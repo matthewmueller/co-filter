@@ -21,7 +21,7 @@ describe('co-filter', function() {
     var paths = ['index.js', 'Makefile', 'blah.js']
     paths = paths.map(function(path) { return join(root, path); });
 
-    filter(paths, exists, function(err, paths) {
+    filter(paths, fs.exists, function(err, paths) {
       if (err) return done(err);
       paths = paths.map(function(path) { return basename(path); });
       assert(2 == paths.length);
@@ -33,11 +33,3 @@ describe('co-filter', function() {
   });
 
 });
-
-/**
- * Exists
- */
-
-function *exists(path) {
-  return yield fs.exists(path);
-}

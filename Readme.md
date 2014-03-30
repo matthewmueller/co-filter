@@ -18,9 +18,7 @@ var filter = require('co-filter');
 
 // use filter within generator or wrap filter in co
 co(function *() {
-  var files = yield filter(files, function *(file) {
-    return yield fs.exists(file);
-  });
+  var files = yield filter(files, fs.exists);
 })();
 ```
 
