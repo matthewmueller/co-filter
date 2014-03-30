@@ -1,0 +1,16 @@
+{
+  "name": "co-filter",
+  "version": "0.0.1",
+  "description": "parallel filter for generators",
+  "keywords": [],
+  "author": "matthew mueller <mattmuelle@gmail.com>",
+  "repository": { "type": "git", "url": "git://github.com/matthewmueller/co-filter.git" },
+  "dependencies": {},
+  "devDependencies": {
+    "co": "*",
+    "co-fs": "*",
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index"
+}
